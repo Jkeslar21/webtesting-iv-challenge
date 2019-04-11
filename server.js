@@ -9,7 +9,7 @@ const bands = [
     {id: 1, band: 'Red Hot Chili Peppers'},
     {id: 2, band: 'Led Zeppelin'},
     {id: 3, band: 'Eminem'},
-    {id: 4, band: 'John Butler Trio'}
+    {id: 4, band: 'John Butler Trio'},
 ]
 
 server.get('/', async (req, res) => {
@@ -18,7 +18,6 @@ server.get('/', async (req, res) => {
 
 server.post("/", (req, res) => {
     const { id, band } = req.body;
-  
     if (!id || !band) {
       res.status(500).end();
     } else {
